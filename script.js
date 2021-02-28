@@ -61,7 +61,7 @@ var canvas = document.getElementById("canvas");
                 if(biggestJumpableHeight > this.highestFloor) {
                     biggestJumpableHeight = this.highestFloor;
                 }
-                var lowest = player.height + 40;
+                var lowest = player.height + 100;
                 var randomHeight = Math.floor(Math.random() * biggestJumpableHeight) + lowest;
                 var leftValue = (previousTile.x + previousTile.width);
                 var next = new floor(leftValue, randomHeight);
