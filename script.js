@@ -57,11 +57,11 @@ var canvas = document.getElementById("canvas");
                 }
                 var previousTile = this.floorTiles[this.floorTiles.length - 1];
                 var biggestJumpable = previousTile.height + player.height * 2;
-                var biggestJumpableHeight = biggestJumpable - 10;
+                var biggestJumpableHeight = biggestJumpable + biggestJumpable / 2 ;
                 if(biggestJumpableHeight > this.highestFloor) {
                     biggestJumpableHeight = this.highestFloor;
                 }
-                var lowest = player.height + 100;
+                var lowest = player.height + 140;
                 var randomHeight = Math.floor(Math.random() * biggestJumpableHeight) + lowest;
                 var leftValue = (previousTile.x + previousTile.width);
                 var next = new floor(leftValue, randomHeight);
