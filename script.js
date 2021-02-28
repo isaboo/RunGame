@@ -56,7 +56,7 @@ var canvas = document.getElementById("canvas");
                     return;
                 }
                 var previousTile = this.floorTiles[this.floorTiles.length - 1];
-                var biggestJumpable = previousTile.height + player.height * (2 + world.speed());
+                var biggestJumpable = previousTile.height + player.height * 2 + world.speed);
                 var biggestJumpableHeight = biggestJumpable - 10;
                 if(biggestJumpableHeight > this.highestFloor) {
                     biggestJumpableHeight = this.highestFloor;
