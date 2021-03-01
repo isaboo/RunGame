@@ -56,12 +56,11 @@ var canvas = document.getElementById("canvas");
                     return;
                 }
                 var previousTile = this.floorTiles[this.floorTiles.length - 1];
-                var biggestJumpable = previousTile.height + player.height * 2.95;
-                var biggestJumpableHeight = biggestJumpable - 10;
+                var biggestJumpableHeight = previousTile.height + player.height * 2.95;
                 if(biggestJumpableHeight > this.highestFloor) {
                     biggestJumpableHeight = this.highestFloor;
                 }
-                var lowest = player.height + 160;
+                var lowest = player.height + 50;
                 var randomHeight = Math.floor(Math.random() * biggestJumpableHeight) + lowest;
                 var leftValue = (previousTile.x + previousTile.width);
                 var next = new floor(leftValue, randomHeight);
