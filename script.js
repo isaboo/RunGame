@@ -147,7 +147,7 @@ var canvas = document.getElementById("canvas");
                 var floorHeight = world.getDistanceToFloor(this.x, this.width);
                 var onTheFloor = floorHeight == (world.height - this.y);
                 if(onTheFloor) {
-                    this.downwardForce = -8;
+                    this.downwardForce = -11;
                 }
             },
             tick: function() {
