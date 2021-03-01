@@ -15,7 +15,7 @@ var canvas = document.getElementById("canvas");
         var world = {
             height: 480,
             width: 640,
-            gravity: 10,
+            gravity: 5,
             highestFloor: 240,
             speed: 5,
             distanceTravelled: 0,
@@ -56,7 +56,7 @@ var canvas = document.getElementById("canvas");
                     return;
                 }
                 var previousTile = this.floorTiles[this.floorTiles.length - 1];
-                var biggestJumpableHeight = previousTile.height + player.height * 2.95;
+                var biggestJumpableHeight = previousTile.height + player.height * 3.5;
                 if(biggestJumpableHeight > this.highestFloor) {
                     biggestJumpableHeight = this.highestFloor;
                 }
