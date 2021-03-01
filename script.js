@@ -16,7 +16,7 @@ var canvas = document.getElementById("canvas");
             height: 480,
             width: 640,
             gravity: 5,
-            highestFloor: 240,
+            highestFloor: 200,
             speed: 5,
             distanceTravelled: 0,
             maxSpeed: 15,
