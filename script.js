@@ -47,7 +47,7 @@ var canvas = document.getElementById("canvas");
             moveFloor: function() {
                 for(index in this.floorTiles) {
                     var tile = this.floorTiles[index];
-                    tile.x -= this.speed;
+                    tile.x -= this.speed + 3;
                     this.distanceTravelled += this.speed;
                 }
             },
