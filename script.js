@@ -136,7 +136,7 @@ var canvas = document.getElementById("canvas");
                     this.y = topYofPlatform;
                 }
                 if(this.downwardForce < 0) {
-                    this.jumpHeight += (this.downwardForce * -1);
+                    this.jumpHeight += (this.downwardForce);
                     if(this.jumpHeight >= player.height * 6) {
                         this.downwardForce = world.gravity;
                         this.jumpHeight = 0;
@@ -147,7 +147,7 @@ var canvas = document.getElementById("canvas");
                 var floorHeight = world.getDistanceToFloor(this.x, this.width);
                 var onTheFloor = floorHeight == (world.height - this.y);
                 if(onTheFloor) {
-                    this.downwardForce = -16;
+                    this.downwardForce = -10;
                 }
             },
             tick: function() {
