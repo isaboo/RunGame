@@ -56,11 +56,11 @@ var canvas = document.getElementById("canvas");
                     return;
                 }
                 var previousTile = this.floorTiles[this.floorTiles.length - 1];
-                var biggestJumpableHeight = previousTile.height + player.height + 50;
+                var biggestJumpableHeight = previousTile.height + player.height + 38;
                 if(biggestJumpableHeight > this.highestFloor) {
                     biggestJumpableHeight = this.highestFloor;
                 }
-                var lowest = player.height + 50;
+                var lowest = player.height + previousTile.height + 20;
                 var randomHeight = Math.floor(Math.random() * biggestJumpableHeight) + lowest;
                 var leftValue = (previousTile.x + previousTile.width);
                 var next = new floor(leftValue, randomHeight);
@@ -177,19 +177,19 @@ var canvas = document.getElementById("canvas");
         function start() {
             new Audio("background.m4a").play();
             document.getElementById("load").innerHTML = "Controls: Tap the screen on the player or press any key.";
-            window.setTimeout("start1()", 1500);
+            window.setTimeout("start1()", 2000);
         }
         function start1() {
             document.getElementById("load").innerHTML = "Get ready to go!";
-            window.setTimeout("start2()", 500);
+            window.setTimeout("start2()", 300);
         }
         function start2() {
             document.getElementById("load").innerHTML = "Rendering game...";
-            window.setTimeout("start3()", 500);
+            window.setTimeout("start3()", 300);
         }
         function start3() {
             document.getElementById("load").innerHTML = "Starting...";
-            window.setTimeout("start4()", 500);
+            window.setTimeout("start4()", 200);
             var random = Math.floor(Math.random() * 1) + 8;
              if(random == 7) { window.location = "er.html"; }
         }
@@ -201,5 +201,5 @@ var canvas = document.getElementById("canvas");
             tick();
         }
         function load() {
-             window.setTimeout("start();", 2000);
+             window.setTimeout("start();", 500);
         }
